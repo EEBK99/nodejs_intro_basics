@@ -1,22 +1,22 @@
-// setTimeout(() => {
-//   console.log("This code executes after 5 seconds");
-// }, 5000);
+// in node.js we import like that
+// const React = require("react");
 
-// function printsomething() {
-//   console.log("This code executes after 5 seconds");
-// }
-// setTimeout(printsomething, 5000);
+const path = require("path");
+// const printSomething = require("./async");
 
-// function printsomething() {
-//   console.log("This code executes after 5 seconds");
-// }
-// console.log("hello");
-// setTimeout(printsomething, 0);
-// console.log("hello2");
+console.log(__filename);
+console.log(__dirname);
 
-function printsomething() {
-  console.log("This code executes after 5 seconds");
-}
-console.log("hello");
-setTimeout(printsomething, 5000);
-console.log("hello2");
+console.log(path.basename(__filename));
+console.log(path.basename(__dirname));
+
+console.log(path.dirname(__dirname));
+
+// printSomething();
+
+console.log(
+  path.join("/nodejs_intro_basics_filesystemapi", "/paths", "/index.js")
+);
+
+console.log(path.extname("index.html"));
+console.log(path.extname(__filename));
